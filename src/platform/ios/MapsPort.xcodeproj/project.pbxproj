@@ -1,0 +1,913 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF4C57E4D736A2732E817B4C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B13D41635EA00A66D0B099 /* libPods.a */; };
+		EF3251241C956E7300BC122C /* rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3251221C956E7300BC122C /* rect.cpp */; };
+		EF3251271C95E19700BC122C /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3251251C95E19700BC122C /* position.cpp */; };
+		EF3251381C97401200BC122C /* FileLoaderPlatform.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF3251371C97401200BC122C /* FileLoaderPlatform.mm */; };
+		EF3251411C97576B00BC122C /* file_loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3251401C97576B00BC122C /* file_loader.cpp */; };
+		EF3251471C975FB200BC122C /* file_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3251451C975FB200BC122C /* file_data.cpp */; };
+		EF32514A1C97635600BC122C /* raw_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3251481C97635600BC122C /* raw_image.cpp */; };
+		EF5D9B771C8EE27A0072143C /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF5D9B751C8EE27A0072143C /* camera.cpp */; };
+		EF5D9B7A1C8F03410072143C /* tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF5D9B781C8F03410072143C /* tile.cpp */; };
+		EF5D9B811C8F61660072143C /* mapview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF5D9B7F1C8F61660072143C /* mapview.cpp */; };
+		EF81C3531C8C4EFC003DDB88 /* platform_file_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C34E1C8C4EFC003DDB88 /* platform_file_utils.c */; };
+		EF81C3541C8C4EFC003DDB88 /* platform_log.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3501C8C4EFC003DDB88 /* platform_log.c */; };
+		EF81C3571C8C4FE6003DDB88 /* platform_asset_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3561C8C4FE6003DDB88 /* platform_asset_utils.mm */; };
+		EF81C3591C8C51DA003DDB88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF81C3581C8C51DA003DDB88 /* Foundation.framework */; };
+		EF81C3951C8C89F6003DDB88 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3931C8C89F6003DDB88 /* buffer.c */; };
+		EF81C3981C8C8A8D003DDB88 /* shader.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3961C8C8A8D003DDB88 /* shader.c */; };
+		EF81C39B1C8C8BD1003DDB88 /* texture.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3991C8C8BD1003DDB88 /* texture.c */; };
+		EF81C39E1C8C8C42003DDB88 /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C39C1C8C8C42003DDB88 /* image.c */; };
+		EF81C3E01C8C8CB4003DDB88 /* pngerror.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3B51C8C8CB4003DDB88 /* pngerror.c */; };
+		EF81C3E11C8C8CB4003DDB88 /* pngget.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3B61C8C8CB4003DDB88 /* pngget.c */; };
+		EF81C3E21C8C8CB4003DDB88 /* pngmem.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3B91C8C8CB4003DDB88 /* pngmem.c */; };
+		EF81C3E41C8C8CB4003DDB88 /* pngpread.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3BB1C8C8CB4003DDB88 /* pngpread.c */; };
+		EF81C3E51C8C8CB4003DDB88 /* pngread.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3BD1C8C8CB4003DDB88 /* pngread.c */; };
+		EF81C3E61C8C8CB4003DDB88 /* pngrio.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3BE1C8C8CB4003DDB88 /* pngrio.c */; };
+		EF81C3E71C8C8CB4003DDB88 /* pngrtran.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3BF1C8C8CB4003DDB88 /* pngrtran.c */; };
+		EF81C3E81C8C8CB4003DDB88 /* pngrutil.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3C01C8C8CB4003DDB88 /* pngrutil.c */; };
+		EF81C3E91C8C8CB4003DDB88 /* pngset.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3C11C8C8CB4003DDB88 /* pngset.c */; };
+		EF81C3EC1C8C8CB4003DDB88 /* pngtrans.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3C51C8C8CB4003DDB88 /* pngtrans.c */; };
+		EF81C3ED1C8C8CB4003DDB88 /* pngwio.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3C61C8C8CB4003DDB88 /* pngwio.c */; };
+		EF81C3EE1C8C8CB4003DDB88 /* pngwrite.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3C71C8C8CB4003DDB88 /* pngwrite.c */; };
+		EF81C3EF1C8C8CB4003DDB88 /* pngwtran.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3C81C8C8CB4003DDB88 /* pngwtran.c */; };
+		EF81C3F01C8C8CB4003DDB88 /* pngwutil.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3C91C8C8CB4003DDB88 /* pngwutil.c */; };
+		EF81C3F11C8C8CB4003DDB88 /* projects in Resources */ = {isa = PBXBuildFile; fileRef = EF81C3CA1C8C8CB4003DDB88 /* projects */; };
+		EF81C3F21C8C8CB4003DDB88 /* README in Resources */ = {isa = PBXBuildFile; fileRef = EF81C3CB1C8C8CB4003DDB88 /* README */; };
+		EF81C3F31C8C8CB4003DDB88 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = EF81C3CC1C8C8CB4003DDB88 /* scripts */; };
+		EF81C3F41C8C8CB4003DDB88 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = EF81C3CD1C8C8CB4003DDB88 /* TODO */; };
+		EF81C3F81C8C9447003DDB88 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF81C3F71C8C9446003DDB88 /* libz.tbd */; };
+		EF81C3FA1C8C94B9003DDB88 /* png.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3F91C8C94B9003DDB88 /* png.c */; };
+		EF81C3FE1C8C95E9003DDB88 /* asset_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = EF81C3FC1C8C95E9003DDB88 /* asset_utils.c */; };
+		EF81C4071C8C9B95003DDB88 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = EF81C4061C8C9B95003DDB88 /* assets */; };
+		EFBD26FB1C8B93FD005A99D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBD26FA1C8B93FD005A99D7 /* main.m */; };
+		EFBD26FE1C8B93FD005A99D7 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = EFBD26FD1C8B93FD005A99D7 /* AppDelegate.mm */; };
+		EFBD27001C8B93FD005A99D7 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = EFBD26FF1C8B93FD005A99D7 /* Shader.fsh */; };
+		EFBD27021C8B93FD005A99D7 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = EFBD27011C8B93FD005A99D7 /* Shader.vsh */; };
+		EFBD27051C8B93FD005A99D7 /* OpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = EFBD27041C8B93FD005A99D7 /* OpenGLView.mm */; };
+		EFBD270A1C8B93FD005A99D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFBD27091C8B93FD005A99D7 /* Assets.xcassets */; };
+		EFBD27181C8B93FD005A99D7 /* MapsPortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBD27171C8B93FD005A99D7 /* MapsPortTests.m */; };
+		EFBD27231C8B93FD005A99D7 /* MapsPortUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBD27221C8B93FD005A99D7 /* MapsPortUITests.m */; };
+		EFBD27391C8C292A005A99D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFBD27381C8C292A005A99D7 /* Main.storyboard */; };
+		EFC6EB351D03478200F3A254 /* matrices.h in Sources */ = {isa = PBXBuildFile; fileRef = EFC6EB341D03478200F3A254 /* matrices.h */; };
+		EFCC057E1C91F70C00E78F97 /* tilelayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCC057C1C91F70C00E78F97 /* tilelayer.cpp */; };
+		EFCC05811C92012400E78F97 /* file_system_tile_loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCC057F1C92012400E78F97 /* file_system_tile_loader.cpp */; };
+		EFDFEEBD1CF9F57D00EC6FF9 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDFEEBC1CF9F57D00EC6FF9 /* libcurl.a */; };
+		EFDFEEC31CFA328900EC6FF9 /* network_tile_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFDFEEC11CFA328900EC6FF9 /* network_tile_reader.cpp */; };
+		EFDFEEC81CFAF8B800EC6FF9 /* tile_reader_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFDFEEC61CFAF8B800EC6FF9 /* tile_reader_base.cpp */; };
+		EFDFEECB1CFB093500EC6FF9 /* filesystem_tile_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFDFEEC91CFB093500EC6FF9 /* filesystem_tile_reader.cpp */; };
+		EFDFEED11CFB198300EC6FF9 /* tile_writer_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFDFEECF1CFB198300EC6FF9 /* tile_writer_base.cpp */; };
+		EFDFEED91CFB644B00EC6FF9 /* PlatformFileSystemTileWriter.mm in Sources */ = {isa = PBXBuildFile; fileRef = EFDFEED81CFB644B00EC6FF9 /* PlatformFileSystemTileWriter.mm */; };
+		EFFCBEE41C93467A002254E0 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFCBEE31C93467A002254E0 /* HttpRequest.m */; };
+		EFFCBEE71C934696002254E0 /* HtppPlatform.mm in Sources */ = {isa = PBXBuildFile; fileRef = EFFCBEE51C934696002254E0 /* HtppPlatform.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFBD27141C8B93FD005A99D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFBD26EE1C8B93FD005A99D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFBD26F51C8B93FD005A99D7;
+			remoteInfo = MapsPort;
+		};
+		EFBD271F1C8B93FD005A99D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFBD26EE1C8B93FD005A99D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFBD26F51C8B93FD005A99D7;
+			remoteInfo = MapsPort;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33448A8420A5C0EB54BED30C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		63EDD50A4E3ED27E39FD0B1C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A0B13D41635EA00A66D0B099 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF284A5E1C9B2C000009887F /* lrucache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = lrucache.h; path = ../../core/lrucache.h; sourceTree = "<group>"; };
+		EF3251221C956E7300BC122C /* rect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rect.cpp; path = ../../core/rect.cpp; sourceTree = "<group>"; };
+		EF3251231C956E7300BC122C /* rect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rect.hpp; path = ../../core/rect.hpp; sourceTree = "<group>"; };
+		EF3251251C95E19700BC122C /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = position.cpp; path = ../../core/position.cpp; sourceTree = "<group>"; };
+		EF3251261C95E19700BC122C /* position.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = position.hpp; path = ../../core/position.hpp; sourceTree = "<group>"; };
+		EF3251361C97401200BC122C /* FileLoaderPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileLoaderPlatform.h; sourceTree = "<group>"; };
+		EF3251371C97401200BC122C /* FileLoaderPlatform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FileLoaderPlatform.mm; sourceTree = "<group>"; };
+		EF32513B1C9746E300BC122C /* file_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = file_loader.h; path = ../../core/file_loader.h; sourceTree = "<group>"; };
+		EF3251401C97576B00BC122C /* file_loader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = file_loader.cpp; path = ../../core/file_loader.cpp; sourceTree = "<group>"; };
+		EF3251451C975FB200BC122C /* file_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = file_data.cpp; path = ../../core/file_data.cpp; sourceTree = "<group>"; };
+		EF3251461C975FB200BC122C /* file_data.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = file_data.hpp; path = ../../core/file_data.hpp; sourceTree = "<group>"; };
+		EF3251481C97635600BC122C /* raw_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = raw_image.cpp; path = ../../core/raw_image.cpp; sourceTree = "<group>"; };
+		EF3251491C97635600BC122C /* raw_image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = raw_image.hpp; path = ../../core/raw_image.hpp; sourceTree = "<group>"; };
+		EF5D9B751C8EE27A0072143C /* camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = camera.cpp; path = ../../core/camera.cpp; sourceTree = "<group>"; };
+		EF5D9B761C8EE27A0072143C /* camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = camera.hpp; path = ../../core/camera.hpp; sourceTree = "<group>"; };
+		EF5D9B781C8F03410072143C /* tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tile.cpp; path = ../../core/tile.cpp; sourceTree = "<group>"; };
+		EF5D9B791C8F03410072143C /* tile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tile.hpp; path = ../../core/tile.hpp; sourceTree = "<group>"; };
+		EF5D9B7C1C8F0C3F0072143C /* vertex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = vertex.hpp; path = ../../core/vertex.hpp; sourceTree = "<group>"; };
+		EF5D9B7E1C8F5BA40072143C /* png.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = png.h; path = ../../3rdparty/libpng/png.h; sourceTree = "<group>"; };
+		EF5D9B7F1C8F61660072143C /* mapview.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mapview.cpp; path = ../../core/mapview.cpp; sourceTree = "<group>"; };
+		EF5D9B801C8F61660072143C /* mapview.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = mapview.hpp; path = ../../core/mapview.hpp; sourceTree = "<group>"; };
+		EF81C3251C8C4DA9003DDB88 /* linmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = linmath.h; path = ../../3rdparty/linmath/linmath.h; sourceTree = "<group>"; };
+		EF81C34D1C8C4EFC003DDB88 /* platform_asset_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform_asset_utils.h; path = ../common/platform_asset_utils.h; sourceTree = "<group>"; };
+		EF81C34E1C8C4EFC003DDB88 /* platform_file_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = platform_file_utils.c; path = ../common/platform_file_utils.c; sourceTree = "<group>"; };
+		EF81C34F1C8C4EFC003DDB88 /* platform_file_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform_file_utils.h; path = ../common/platform_file_utils.h; sourceTree = "<group>"; };
+		EF81C3501C8C4EFC003DDB88 /* platform_log.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = platform_log.c; path = ../common/platform_log.c; sourceTree = "<group>"; };
+		EF81C3511C8C4EFC003DDB88 /* platform_log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform_log.h; path = ../common/platform_log.h; sourceTree = "<group>"; };
+		EF81C3521C8C4EFC003DDB88 /* platform_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform_macros.h; path = ../common/platform_macros.h; sourceTree = "<group>"; };
+		EF81C3551C8C4F58003DDB88 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../core/config.h; sourceTree = "<group>"; };
+		EF81C3561C8C4FE6003DDB88 /* platform_asset_utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = platform_asset_utils.mm; sourceTree = SOURCE_ROOT; };
+		EF81C3581C8C51DA003DDB88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EF81C3931C8C89F6003DDB88 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = buffer.c; path = ../../core/buffer.c; sourceTree = "<group>"; };
+		EF81C3941C8C89F6003DDB88 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = ../../core/buffer.h; sourceTree = "<group>"; };
+		EF81C3961C8C8A8D003DDB88 /* shader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = shader.c; path = ../../core/shader.c; sourceTree = "<group>"; };
+		EF81C3971C8C8A8D003DDB88 /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shader.h; path = ../../core/shader.h; sourceTree = "<group>"; };
+		EF81C3991C8C8BD1003DDB88 /* texture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = texture.c; path = ../../core/texture.c; sourceTree = "<group>"; };
+		EF81C39A1C8C8BD1003DDB88 /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = texture.h; path = ../../core/texture.h; sourceTree = "<group>"; };
+		EF81C39C1C8C8C42003DDB88 /* image.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = image.c; path = ../../core/image.c; sourceTree = "<group>"; };
+		EF81C39D1C8C8C42003DDB88 /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = image.h; path = ../../core/image.h; sourceTree = "<group>"; };
+		EF81C3B51C8C8CB4003DDB88 /* pngerror.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngerror.c; path = ../../3rdparty/libpng/pngerror.c; sourceTree = "<group>"; };
+		EF81C3B61C8C8CB4003DDB88 /* pngget.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngget.c; path = ../../3rdparty/libpng/pngget.c; sourceTree = "<group>"; };
+		EF81C3B91C8C8CB4003DDB88 /* pngmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngmem.c; path = ../../3rdparty/libpng/pngmem.c; sourceTree = "<group>"; };
+		EF81C3BB1C8C8CB4003DDB88 /* pngpread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngpread.c; path = ../../3rdparty/libpng/pngpread.c; sourceTree = "<group>"; };
+		EF81C3BD1C8C8CB4003DDB88 /* pngread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngread.c; path = ../../3rdparty/libpng/pngread.c; sourceTree = "<group>"; };
+		EF81C3BE1C8C8CB4003DDB88 /* pngrio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngrio.c; path = ../../3rdparty/libpng/pngrio.c; sourceTree = "<group>"; };
+		EF81C3BF1C8C8CB4003DDB88 /* pngrtran.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngrtran.c; path = ../../3rdparty/libpng/pngrtran.c; sourceTree = "<group>"; };
+		EF81C3C01C8C8CB4003DDB88 /* pngrutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngrutil.c; path = ../../3rdparty/libpng/pngrutil.c; sourceTree = "<group>"; };
+		EF81C3C11C8C8CB4003DDB88 /* pngset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngset.c; path = ../../3rdparty/libpng/pngset.c; sourceTree = "<group>"; };
+		EF81C3C51C8C8CB4003DDB88 /* pngtrans.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngtrans.c; path = ../../3rdparty/libpng/pngtrans.c; sourceTree = "<group>"; };
+		EF81C3C61C8C8CB4003DDB88 /* pngwio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngwio.c; path = ../../3rdparty/libpng/pngwio.c; sourceTree = "<group>"; };
+		EF81C3C71C8C8CB4003DDB88 /* pngwrite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngwrite.c; path = ../../3rdparty/libpng/pngwrite.c; sourceTree = "<group>"; };
+		EF81C3C81C8C8CB4003DDB88 /* pngwtran.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngwtran.c; path = ../../3rdparty/libpng/pngwtran.c; sourceTree = "<group>"; };
+		EF81C3C91C8C8CB4003DDB88 /* pngwutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pngwutil.c; path = ../../3rdparty/libpng/pngwutil.c; sourceTree = "<group>"; };
+		EF81C3CA1C8C8CB4003DDB88 /* projects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = projects; path = ../../3rdparty/libpng/projects; sourceTree = "<group>"; };
+		EF81C3CB1C8C8CB4003DDB88 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ../../3rdparty/libpng/README; sourceTree = "<group>"; };
+		EF81C3CC1C8C8CB4003DDB88 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = scripts; path = ../../3rdparty/libpng/scripts; sourceTree = "<group>"; };
+		EF81C3CD1C8C8CB4003DDB88 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO; path = ../../3rdparty/libpng/TODO; sourceTree = "<group>"; };
+		EF81C3F71C8C9446003DDB88 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EF81C3F91C8C94B9003DDB88 /* png.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = png.c; path = ../../3rdparty/libpng/png.c; sourceTree = "<group>"; };
+		EF81C3FB1C8C95BD003DDB88 /* macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		EF81C3FC1C8C95E9003DDB88 /* asset_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = asset_utils.c; path = ../../core/asset_utils.c; sourceTree = "<group>"; };
+		EF81C3FD1C8C95E9003DDB88 /* asset_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asset_utils.h; path = ../../core/asset_utils.h; sourceTree = "<group>"; };
+		EF81C4061C8C9B95003DDB88 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../../assets; sourceTree = "<group>"; };
+		EFBD26F61C8B93FD005A99D7 /* MapsPort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapsPort.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBD26FA1C8B93FD005A99D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFBD26FC1C8B93FD005A99D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFBD26FD1C8B93FD005A99D7 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		EFBD26FF1C8B93FD005A99D7 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		EFBD27011C8B93FD005A99D7 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		EFBD27031C8B93FD005A99D7 /* OpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		EFBD27041C8B93FD005A99D7 /* OpenGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLView.mm; sourceTree = "<group>"; };
+		EFBD27091C8B93FD005A99D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFBD270E1C8B93FD005A99D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFBD27131C8B93FD005A99D7 /* MapsPortTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapsPortTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBD27171C8B93FD005A99D7 /* MapsPortTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsPortTests.m; sourceTree = "<group>"; };
+		EFBD27191C8B93FD005A99D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFBD271E1C8B93FD005A99D7 /* MapsPortUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapsPortUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBD27221C8B93FD005A99D7 /* MapsPortUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsPortUITests.m; sourceTree = "<group>"; };
+		EFBD27241C8B93FD005A99D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFBD27341C8BA242005A99D7 /* platform_gl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform_gl.h; path = ../platform_gl.h; sourceTree = "<group>"; };
+		EFBD27381C8C292A005A99D7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EFC6EB341D03478200F3A254 /* matrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrices.h; path = ../../core/matrices.h; sourceTree = "<group>"; };
+		EFCC057C1C91F70C00E78F97 /* tilelayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tilelayer.cpp; path = ../../core/tilelayer.cpp; sourceTree = "<group>"; };
+		EFCC057D1C91F70C00E78F97 /* tilelayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tilelayer.hpp; path = ../../core/tilelayer.hpp; sourceTree = "<group>"; };
+		EFCC057F1C92012400E78F97 /* file_system_tile_loader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = file_system_tile_loader.cpp; path = ../../core/file_system_tile_loader.cpp; sourceTree = "<group>"; };
+		EFCC05801C92012400E78F97 /* file_system_tile_loader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = file_system_tile_loader.hpp; path = ../../core/file_system_tile_loader.hpp; sourceTree = "<group>"; };
+		EFDFEEBC1CF9F57D00EC6FF9 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../../../../GitHub/curl-android-ios/prebuilt-with-ssl/iOS/libcurl.a"; sourceTree = "<group>"; };
+		EFDFEEC11CFA328900EC6FF9 /* network_tile_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = network_tile_reader.cpp; path = ../../core/network_tile_reader.cpp; sourceTree = "<group>"; };
+		EFDFEEC21CFA328900EC6FF9 /* network_tile_reader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = network_tile_reader.hpp; path = ../../core/network_tile_reader.hpp; sourceTree = "<group>"; };
+		EFDFEEC61CFAF8B800EC6FF9 /* tile_reader_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tile_reader_base.cpp; path = ../../core/tile_reader_base.cpp; sourceTree = "<group>"; };
+		EFDFEEC71CFAF8B800EC6FF9 /* tile_reader_base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tile_reader_base.hpp; path = ../../core/tile_reader_base.hpp; sourceTree = "<group>"; };
+		EFDFEEC91CFB093500EC6FF9 /* filesystem_tile_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = filesystem_tile_reader.cpp; path = ../../core/filesystem_tile_reader.cpp; sourceTree = "<group>"; };
+		EFDFEECA1CFB093500EC6FF9 /* filesystem_tile_reader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = filesystem_tile_reader.hpp; path = ../../core/filesystem_tile_reader.hpp; sourceTree = "<group>"; };
+		EFDFEECF1CFB198300EC6FF9 /* tile_writer_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tile_writer_base.cpp; path = ../../core/tile_writer_base.cpp; sourceTree = "<group>"; };
+		EFDFEED01CFB198300EC6FF9 /* tile_writer_base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tile_writer_base.hpp; path = ../../core/tile_writer_base.hpp; sourceTree = "<group>"; };
+		EFDFEED31CFB2E3D00EC6FF9 /* filesystem_tile_writer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = filesystem_tile_writer.hpp; path = ../../core/filesystem_tile_writer.hpp; sourceTree = "<group>"; };
+		EFDFEED71CFB644B00EC6FF9 /* PlatformFileSystemTileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformFileSystemTileWriter.h; sourceTree = "<group>"; };
+		EFDFEED81CFB644B00EC6FF9 /* PlatformFileSystemTileWriter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlatformFileSystemTileWriter.mm; sourceTree = "<group>"; };
+		EFF8A6CD1C99EC91003AEC2C /* threadpool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = threadpool.h; path = ../../core/threadpool.h; sourceTree = "<group>"; };
+		EFFCBEE21C93467A002254E0 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		EFFCBEE31C93467A002254E0 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		EFFCBEE51C934696002254E0 /* HtppPlatform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HtppPlatform.mm; sourceTree = "<group>"; };
+		EFFCBEE61C934696002254E0 /* HtppPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtppPlatform.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFBD26F31C8B93FD005A99D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDFEEBD1CF9F57D00EC6FF9 /* libcurl.a in Frameworks */,
+				EF81C3F81C8C9447003DDB88 /* libz.tbd in Frameworks */,
+				EF81C3591C8C51DA003DDB88 /* Foundation.framework in Frameworks */,
+				BF4C57E4D736A2732E817B4C /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBD27101C8B93FD005A99D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBD271B1C8B93FD005A99D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70C5F91D8D6DE171FFB79793 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFDFEEBC1CF9F57D00EC6FF9 /* libcurl.a */,
+				A0B13D41635EA00A66D0B099 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF81C2D31C8C4C19003DDB88 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				EF5D9B7F1C8F61660072143C /* mapview.cpp */,
+				EF5D9B801C8F61660072143C /* mapview.hpp */,
+				EF81C3551C8C4F58003DDB88 /* config.h */,
+				EF81C3931C8C89F6003DDB88 /* buffer.c */,
+				EF81C3941C8C89F6003DDB88 /* buffer.h */,
+				EF81C3961C8C8A8D003DDB88 /* shader.c */,
+				EF81C3971C8C8A8D003DDB88 /* shader.h */,
+				EF81C3991C8C8BD1003DDB88 /* texture.c */,
+				EF81C39A1C8C8BD1003DDB88 /* texture.h */,
+				EF81C39C1C8C8C42003DDB88 /* image.c */,
+				EF81C39D1C8C8C42003DDB88 /* image.h */,
+				EF81C3FB1C8C95BD003DDB88 /* macros.h */,
+				EF81C3FC1C8C95E9003DDB88 /* asset_utils.c */,
+				EF81C3FD1C8C95E9003DDB88 /* asset_utils.h */,
+				EF5D9B751C8EE27A0072143C /* camera.cpp */,
+				EF5D9B761C8EE27A0072143C /* camera.hpp */,
+				EF5D9B781C8F03410072143C /* tile.cpp */,
+				EF5D9B791C8F03410072143C /* tile.hpp */,
+				EF5D9B7C1C8F0C3F0072143C /* vertex.hpp */,
+				EFCC057C1C91F70C00E78F97 /* tilelayer.cpp */,
+				EFCC057D1C91F70C00E78F97 /* tilelayer.hpp */,
+				EFCC057F1C92012400E78F97 /* file_system_tile_loader.cpp */,
+				EFCC05801C92012400E78F97 /* file_system_tile_loader.hpp */,
+				EF3251221C956E7300BC122C /* rect.cpp */,
+				EF3251231C956E7300BC122C /* rect.hpp */,
+				EF3251251C95E19700BC122C /* position.cpp */,
+				EF3251261C95E19700BC122C /* position.hpp */,
+				EF32513B1C9746E300BC122C /* file_loader.h */,
+				EF3251401C97576B00BC122C /* file_loader.cpp */,
+				EF3251451C975FB200BC122C /* file_data.cpp */,
+				EF3251461C975FB200BC122C /* file_data.hpp */,
+				EF3251481C97635600BC122C /* raw_image.cpp */,
+				EF3251491C97635600BC122C /* raw_image.hpp */,
+				EFF8A6CD1C99EC91003AEC2C /* threadpool.h */,
+				EF284A5E1C9B2C000009887F /* lrucache.h */,
+				EFDFEEC11CFA328900EC6FF9 /* network_tile_reader.cpp */,
+				EFDFEEC21CFA328900EC6FF9 /* network_tile_reader.hpp */,
+				EFDFEEC61CFAF8B800EC6FF9 /* tile_reader_base.cpp */,
+				EFDFEEC71CFAF8B800EC6FF9 /* tile_reader_base.hpp */,
+				EFDFEEC91CFB093500EC6FF9 /* filesystem_tile_reader.cpp */,
+				EFDFEECA1CFB093500EC6FF9 /* filesystem_tile_reader.hpp */,
+				EFDFEECF1CFB198300EC6FF9 /* tile_writer_base.cpp */,
+				EFDFEED01CFB198300EC6FF9 /* tile_writer_base.hpp */,
+				EFDFEED31CFB2E3D00EC6FF9 /* filesystem_tile_writer.hpp */,
+				EFC6EB341D03478200F3A254 /* matrices.h */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		EF81C2D71C8C4CC3003DDB88 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				EF81C39F1C8C8CA2003DDB88 /* libpng */,
+				EF81C3241C8C4D9D003DDB88 /* linmath */,
+			);
+			name = 3rdParty;
+			sourceTree = "<group>";
+		};
+		EF81C3241C8C4D9D003DDB88 /* linmath */ = {
+			isa = PBXGroup;
+			children = (
+				EF81C3251C8C4DA9003DDB88 /* linmath.h */,
+			);
+			name = linmath;
+			sourceTree = "<group>";
+		};
+		EF81C34C1C8C4EEF003DDB88 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				EF81C34D1C8C4EFC003DDB88 /* platform_asset_utils.h */,
+				EF81C34E1C8C4EFC003DDB88 /* platform_file_utils.c */,
+				EF81C34F1C8C4EFC003DDB88 /* platform_file_utils.h */,
+				EF81C3501C8C4EFC003DDB88 /* platform_log.c */,
+				EF81C3511C8C4EFC003DDB88 /* platform_log.h */,
+				EF81C3521C8C4EFC003DDB88 /* platform_macros.h */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		EF81C39F1C8C8CA2003DDB88 /* libpng */ = {
+			isa = PBXGroup;
+			children = (
+				EF5D9B7E1C8F5BA40072143C /* png.h */,
+				EF81C3F91C8C94B9003DDB88 /* png.c */,
+				EF81C3B51C8C8CB4003DDB88 /* pngerror.c */,
+				EF81C3B61C8C8CB4003DDB88 /* pngget.c */,
+				EF81C3B91C8C8CB4003DDB88 /* pngmem.c */,
+				EF81C3BB1C8C8CB4003DDB88 /* pngpread.c */,
+				EF81C3BD1C8C8CB4003DDB88 /* pngread.c */,
+				EF81C3BE1C8C8CB4003DDB88 /* pngrio.c */,
+				EF81C3BF1C8C8CB4003DDB88 /* pngrtran.c */,
+				EF81C3C01C8C8CB4003DDB88 /* pngrutil.c */,
+				EF81C3C11C8C8CB4003DDB88 /* pngset.c */,
+				EF81C3C51C8C8CB4003DDB88 /* pngtrans.c */,
+				EF81C3C61C8C8CB4003DDB88 /* pngwio.c */,
+				EF81C3C71C8C8CB4003DDB88 /* pngwrite.c */,
+				EF81C3C81C8C8CB4003DDB88 /* pngwtran.c */,
+				EF81C3C91C8C8CB4003DDB88 /* pngwutil.c */,
+				EF81C3CA1C8C8CB4003DDB88 /* projects */,
+				EF81C3CB1C8C8CB4003DDB88 /* README */,
+				EF81C3CC1C8C8CB4003DDB88 /* scripts */,
+				EF81C3CD1C8C8CB4003DDB88 /* TODO */,
+			);
+			name = libpng;
+			sourceTree = "<group>";
+		};
+		EFB398F26E5878B897D51861 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63EDD50A4E3ED27E39FD0B1C /* Pods.debug.xcconfig */,
+				33448A8420A5C0EB54BED30C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EFBD26ED1C8B93FD005A99D7 = {
+			isa = PBXGroup;
+			children = (
+				EF81C4061C8C9B95003DDB88 /* assets */,
+				EF81C3F71C8C9446003DDB88 /* libz.tbd */,
+				EF81C3581C8C51DA003DDB88 /* Foundation.framework */,
+				EF81C34C1C8C4EEF003DDB88 /* common */,
+				EF81C2D71C8C4CC3003DDB88 /* 3rdParty */,
+				EF81C2D31C8C4C19003DDB88 /* core */,
+				EFBD26F81C8B93FD005A99D7 /* MapsPort */,
+				EFBD27161C8B93FD005A99D7 /* MapsPortTests */,
+				EFBD27211C8B93FD005A99D7 /* MapsPortUITests */,
+				EFBD26F71C8B93FD005A99D7 /* Products */,
+				EFB398F26E5878B897D51861 /* Pods */,
+				70C5F91D8D6DE171FFB79793 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EFBD26F71C8B93FD005A99D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFBD26F61C8B93FD005A99D7 /* MapsPort.app */,
+				EFBD27131C8B93FD005A99D7 /* MapsPortTests.xctest */,
+				EFBD271E1C8B93FD005A99D7 /* MapsPortUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFBD26F81C8B93FD005A99D7 /* MapsPort */ = {
+			isa = PBXGroup;
+			children = (
+				EF81C3561C8C4FE6003DDB88 /* platform_asset_utils.mm */,
+				EFBD27341C8BA242005A99D7 /* platform_gl.h */,
+				EFBD26FC1C8B93FD005A99D7 /* AppDelegate.h */,
+				EFBD26FD1C8B93FD005A99D7 /* AppDelegate.mm */,
+				EFBD26FF1C8B93FD005A99D7 /* Shader.fsh */,
+				EFBD27011C8B93FD005A99D7 /* Shader.vsh */,
+				EFBD27031C8B93FD005A99D7 /* OpenGLView.h */,
+				EFBD27041C8B93FD005A99D7 /* OpenGLView.mm */,
+				EFBD27091C8B93FD005A99D7 /* Assets.xcassets */,
+				EFBD270E1C8B93FD005A99D7 /* Info.plist */,
+				EFBD26F91C8B93FD005A99D7 /* Supporting Files */,
+				EFBD27381C8C292A005A99D7 /* Main.storyboard */,
+				EFFCBEE21C93467A002254E0 /* HttpRequest.h */,
+				EFFCBEE31C93467A002254E0 /* HttpRequest.m */,
+				EFFCBEE51C934696002254E0 /* HtppPlatform.mm */,
+				EFFCBEE61C934696002254E0 /* HtppPlatform.h */,
+				EF3251361C97401200BC122C /* FileLoaderPlatform.h */,
+				EF3251371C97401200BC122C /* FileLoaderPlatform.mm */,
+				EFDFEED71CFB644B00EC6FF9 /* PlatformFileSystemTileWriter.h */,
+				EFDFEED81CFB644B00EC6FF9 /* PlatformFileSystemTileWriter.mm */,
+			);
+			path = MapsPort;
+			sourceTree = "<group>";
+		};
+		EFBD26F91C8B93FD005A99D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFBD26FA1C8B93FD005A99D7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFBD27161C8B93FD005A99D7 /* MapsPortTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFBD27171C8B93FD005A99D7 /* MapsPortTests.m */,
+				EFBD27191C8B93FD005A99D7 /* Info.plist */,
+			);
+			path = MapsPortTests;
+			sourceTree = "<group>";
+		};
+		EFBD27211C8B93FD005A99D7 /* MapsPortUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFBD27221C8B93FD005A99D7 /* MapsPortUITests.m */,
+				EFBD27241C8B93FD005A99D7 /* Info.plist */,
+			);
+			path = MapsPortUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFBD26F51C8B93FD005A99D7 /* MapsPort */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFBD27271C8B93FD005A99D7 /* Build configuration list for PBXNativeTarget "MapsPort" */;
+			buildPhases = (
+				85ECDCD2947699AEB0F1CB91 /* Check Pods Manifest.lock */,
+				EFBD26F21C8B93FD005A99D7 /* Sources */,
+				EFBD26F31C8B93FD005A99D7 /* Frameworks */,
+				EFBD26F41C8B93FD005A99D7 /* Resources */,
+				E3DC5CCCEC962058A357E784 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapsPort;
+			productName = MapsPort;
+			productReference = EFBD26F61C8B93FD005A99D7 /* MapsPort.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFBD27121C8B93FD005A99D7 /* MapsPortTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFBD272A1C8B93FD005A99D7 /* Build configuration list for PBXNativeTarget "MapsPortTests" */;
+			buildPhases = (
+				EFBD270F1C8B93FD005A99D7 /* Sources */,
+				EFBD27101C8B93FD005A99D7 /* Frameworks */,
+				EFBD27111C8B93FD005A99D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFBD27151C8B93FD005A99D7 /* PBXTargetDependency */,
+			);
+			name = MapsPortTests;
+			productName = MapsPortTests;
+			productReference = EFBD27131C8B93FD005A99D7 /* MapsPortTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFBD271D1C8B93FD005A99D7 /* MapsPortUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFBD272D1C8B93FD005A99D7 /* Build configuration list for PBXNativeTarget "MapsPortUITests" */;
+			buildPhases = (
+				EFBD271A1C8B93FD005A99D7 /* Sources */,
+				EFBD271B1C8B93FD005A99D7 /* Frameworks */,
+				EFBD271C1C8B93FD005A99D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFBD27201C8B93FD005A99D7 /* PBXTargetDependency */,
+			);
+			name = MapsPortUITests;
+			productName = MapsPortUITests;
+			productReference = EFBD271E1C8B93FD005A99D7 /* MapsPortUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFBD26EE1C8B93FD005A99D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Iskandar;
+				TargetAttributes = {
+					EFBD26F51C8B93FD005A99D7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 679Q2Q329Q;
+					};
+					EFBD27121C8B93FD005A99D7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 679Q2Q329Q;
+						TestTargetID = EFBD26F51C8B93FD005A99D7;
+					};
+					EFBD271D1C8B93FD005A99D7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 679Q2Q329Q;
+						TestTargetID = EFBD26F51C8B93FD005A99D7;
+					};
+				};
+			};
+			buildConfigurationList = EFBD26F11C8B93FD005A99D7 /* Build configuration list for PBXProject "MapsPort" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFBD26ED1C8B93FD005A99D7;
+			productRefGroup = EFBD26F71C8B93FD005A99D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFBD26F51C8B93FD005A99D7 /* MapsPort */,
+				EFBD27121C8B93FD005A99D7 /* MapsPortTests */,
+				EFBD271D1C8B93FD005A99D7 /* MapsPortUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFBD26F41C8B93FD005A99D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF81C3F11C8C8CB4003DDB88 /* projects in Resources */,
+				EF81C3F31C8C8CB4003DDB88 /* scripts in Resources */,
+				EFBD27021C8B93FD005A99D7 /* Shader.vsh in Resources */,
+				EF81C4071C8C9B95003DDB88 /* assets in Resources */,
+				EFBD27391C8C292A005A99D7 /* Main.storyboard in Resources */,
+				EF81C3F21C8C8CB4003DDB88 /* README in Resources */,
+				EF81C3F41C8C8CB4003DDB88 /* TODO in Resources */,
+				EFBD270A1C8B93FD005A99D7 /* Assets.xcassets in Resources */,
+				EFBD27001C8B93FD005A99D7 /* Shader.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBD27111C8B93FD005A99D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBD271C1C8B93FD005A99D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85ECDCD2947699AEB0F1CB91 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3DC5CCCEC962058A357E784 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFBD26F21C8B93FD005A99D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF81C3E21C8C8CB4003DDB88 /* pngmem.c in Sources */,
+				EF81C3E81C8C8CB4003DDB88 /* pngrutil.c in Sources */,
+				EF81C3981C8C8A8D003DDB88 /* shader.c in Sources */,
+				EF81C3951C8C89F6003DDB88 /* buffer.c in Sources */,
+				EFDFEED11CFB198300EC6FF9 /* tile_writer_base.cpp in Sources */,
+				EF3251271C95E19700BC122C /* position.cpp in Sources */,
+				EF81C3ED1C8C8CB4003DDB88 /* pngwio.c in Sources */,
+				EF5D9B811C8F61660072143C /* mapview.cpp in Sources */,
+				EF81C3E91C8C8CB4003DDB88 /* pngset.c in Sources */,
+				EF81C3E41C8C8CB4003DDB88 /* pngpread.c in Sources */,
+				EF81C3FA1C8C94B9003DDB88 /* png.c in Sources */,
+				EFDFEEC31CFA328900EC6FF9 /* network_tile_reader.cpp in Sources */,
+				EF81C3E01C8C8CB4003DDB88 /* pngerror.c in Sources */,
+				EF3251381C97401200BC122C /* FileLoaderPlatform.mm in Sources */,
+				EFBD26FE1C8B93FD005A99D7 /* AppDelegate.mm in Sources */,
+				EFC6EB351D03478200F3A254 /* matrices.h in Sources */,
+				EF5D9B771C8EE27A0072143C /* camera.cpp in Sources */,
+				EFDFEED91CFB644B00EC6FF9 /* PlatformFileSystemTileWriter.mm in Sources */,
+				EF81C3F01C8C8CB4003DDB88 /* pngwutil.c in Sources */,
+				EFCC057E1C91F70C00E78F97 /* tilelayer.cpp in Sources */,
+				EFFCBEE41C93467A002254E0 /* HttpRequest.m in Sources */,
+				EF81C3E61C8C8CB4003DDB88 /* pngrio.c in Sources */,
+				EFBD27051C8B93FD005A99D7 /* OpenGLView.mm in Sources */,
+				EF81C3FE1C8C95E9003DDB88 /* asset_utils.c in Sources */,
+				EF81C3E71C8C8CB4003DDB88 /* pngrtran.c in Sources */,
+				EF81C39E1C8C8C42003DDB88 /* image.c in Sources */,
+				EFDFEECB1CFB093500EC6FF9 /* filesystem_tile_reader.cpp in Sources */,
+				EF81C3EF1C8C8CB4003DDB88 /* pngwtran.c in Sources */,
+				EF3251471C975FB200BC122C /* file_data.cpp in Sources */,
+				EFFCBEE71C934696002254E0 /* HtppPlatform.mm in Sources */,
+				EFDFEEC81CFAF8B800EC6FF9 /* tile_reader_base.cpp in Sources */,
+				EF3251411C97576B00BC122C /* file_loader.cpp in Sources */,
+				EFCC05811C92012400E78F97 /* file_system_tile_loader.cpp in Sources */,
+				EF81C3541C8C4EFC003DDB88 /* platform_log.c in Sources */,
+				EF81C3571C8C4FE6003DDB88 /* platform_asset_utils.mm in Sources */,
+				EF81C3EE1C8C8CB4003DDB88 /* pngwrite.c in Sources */,
+				EF81C3E51C8C8CB4003DDB88 /* pngread.c in Sources */,
+				EF5D9B7A1C8F03410072143C /* tile.cpp in Sources */,
+				EF81C3EC1C8C8CB4003DDB88 /* pngtrans.c in Sources */,
+				EFBD26FB1C8B93FD005A99D7 /* main.m in Sources */,
+				EF81C3531C8C4EFC003DDB88 /* platform_file_utils.c in Sources */,
+				EF3251241C956E7300BC122C /* rect.cpp in Sources */,
+				EF81C3E11C8C8CB4003DDB88 /* pngget.c in Sources */,
+				EF81C39B1C8C8BD1003DDB88 /* texture.c in Sources */,
+				EF32514A1C97635600BC122C /* raw_image.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBD270F1C8B93FD005A99D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBD27181C8B93FD005A99D7 /* MapsPortTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBD271A1C8B93FD005A99D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBD27231C8B93FD005A99D7 /* MapsPortUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFBD27151C8B93FD005A99D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFBD26F51C8B93FD005A99D7 /* MapsPort */;
+			targetProxy = EFBD27141C8B93FD005A99D7 /* PBXContainerItemProxy */;
+		};
+		EFBD27201C8B93FD005A99D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFBD26F51C8B93FD005A99D7 /* MapsPort */;
+			targetProxy = EFBD271F1C8B93FD005A99D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EFBD27251C8B93FD005A99D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFBD27261C8B93FD005A99D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFBD27281C8B93FD005A99D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63EDD50A4E3ED27E39FD0B1C /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+					i686,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"/Users/ishabaev/Documents/MapsPort/src/3rdparty/poco-1.7.0/Net/include",
+					"/Users/ishabaev/Documents/MapsPort/src/3rdparty/poco-1.7.0/Foundation/include",
+					"/Users/ishabaev/GitHub/curl-android-ios/prebuilt-with-ssl/iOS/include",
+				);
+				INFOPLIST_FILE = MapsPort/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"/Users/ishabaev/Documents/MapsPort/src/3rdparty/poco-1.7.0/lib/iPhoneSimulator/i686",
+					"/Users/ishabaev/GitHub/curl-android-ios/prebuilt-with-ssl/**",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ishabaev.MapsPort;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64 i686";
+			};
+			name = Debug;
+		};
+		EFBD27291C8B93FD005A99D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33448A8420A5C0EB54BED30C /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = MapsPort/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = ishabaev.MapsPort;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64 i686";
+			};
+			name = Release;
+		};
+		EFBD272B1C8B93FD005A99D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = MapsPortTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = ishabaev.MapsPortTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapsPort.app/MapsPort";
+			};
+			name = Debug;
+		};
+		EFBD272C1C8B93FD005A99D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MapsPortTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ishabaev.MapsPortTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapsPort.app/MapsPort";
+			};
+			name = Release;
+		};
+		EFBD272E1C8B93FD005A99D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = MapsPortUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ishabaev.MapsPortUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MapsPort;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EFBD272F1C8B93FD005A99D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MapsPortUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ishabaev.MapsPortUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MapsPort;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFBD26F11C8B93FD005A99D7 /* Build configuration list for PBXProject "MapsPort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBD27251C8B93FD005A99D7 /* Debug */,
+				EFBD27261C8B93FD005A99D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFBD27271C8B93FD005A99D7 /* Build configuration list for PBXNativeTarget "MapsPort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBD27281C8B93FD005A99D7 /* Debug */,
+				EFBD27291C8B93FD005A99D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFBD272A1C8B93FD005A99D7 /* Build configuration list for PBXNativeTarget "MapsPortTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBD272B1C8B93FD005A99D7 /* Debug */,
+				EFBD272C1C8B93FD005A99D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFBD272D1C8B93FD005A99D7 /* Build configuration list for PBXNativeTarget "MapsPortUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBD272E1C8B93FD005A99D7 /* Debug */,
+				EFBD272F1C8B93FD005A99D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFBD26EE1C8B93FD005A99D7 /* Project object */;
+}

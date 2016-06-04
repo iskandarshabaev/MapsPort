@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ishabaev.mapsport.MainActivity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/glsurface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:id="@+id/zoomIn"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add_24dp"
+        android:tint="@android:color/white"
+        android:clickable="true"/>
+
+    <Button
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:id="@+id/zoomOut"
+        android:layout_below="@+id/zoomIn"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_remove_24dp"
+        android:tint="@android:color/white"
+        android:clickable="true" />
+</RelativeLayout>
